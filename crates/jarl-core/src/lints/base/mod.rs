@@ -68,6 +68,7 @@ pub(crate) mod unnecessary_parentheses;
 pub(crate) mod unreachable_code;
 pub(crate) mod unused_function;
 pub(crate) mod unused_object;
+pub(crate) mod vector_list;
 pub(crate) mod vector_logic;
 pub(crate) mod which_grepl;
 pub(crate) mod yoda_condition;

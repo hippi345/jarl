@@ -1,0 +1,12 @@
+---
+source: crates/jarl-core/src/lints/base/vector_list/mod.rs
+expression: "snapshot_lint(\"lapply(n, function(x) NULL)\")"
+---
+warning: vector_list
+ --> <test>:1:1
+  |
+1 | lapply(n, function(x) NULL)
+  | --------------------------- `lapply()` with a function that returns `NULL` is inefficient.
+  |
+  = help: Use `vector("list", ...)` instead.
+Found 1 error.

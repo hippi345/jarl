@@ -742,6 +742,13 @@ declare_rules! {
         fix: None,
         min_r_version: None,
     },
+    VectorList => {
+        name: "vector_list",
+        categories: [Perf],
+        default: Enabled,
+        fix: Unsafe,
+        min_r_version: None,
+    },
     WhichGrepl => {
         name: "which_grepl",
         categories: [Perf, Read],

@@ -1,0 +1,19 @@
+---
+source: crates/jarl-core/src/lints/base/vector_list/mod.rs
+expression: "get_unsafe_fixed_text(vec![\"# leading comment\\nlapply(x, function(x) NULL)\",\n\"lapply(x, function(x) NULL) # trailing comment\",], \"vector_list\",)"
+---
+OLD:
+====
+# leading comment
+lapply(x, function(x) NULL)
+NEW:
+====
+# leading comment
+vector("list", length(x))
+
+OLD:
+====
+lapply(x, function(x) NULL) # trailing comment
+NEW:
+====
+vector("list", length(x)) # trailing comment

@@ -134,6 +134,7 @@ website:
             - rules/lengths.md
             - rules/library_call.md
             - rules/list2df.md
+            - rules/vector_list.md
             - rules/literal_coercion.md
             - rules/matrix_apply.md
             - rules/misnamed_suppression.md
